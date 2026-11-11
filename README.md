@@ -45,7 +45,7 @@ Para ver no computador antes de subir, basta abrir o `index.html` no navegador.
 
 ## Depois de mudar o visual ou o funcionamento
 
-No `index.html`, `estilo.css`, `dados.js` e `app.js` são carregados com `?v=3` no fim.
+No `index.html`, `estilo.css`, `dados.js` e `app.js` são carregados com `?v=4` no fim.
 Sempre que mudar um desses arquivos, aumente esse número (`?v=3`, `?v=4`...). Senão o
 navegador de quem já visitou o site pode continuar usando a versão antiga guardada.
 

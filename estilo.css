@@ -96,13 +96,13 @@ button{font:inherit;color:inherit}
 .hero-foto::after{content:"";position:absolute;inset:0;
   background:linear-gradient(90deg,rgba(42,6,38,.96) 0%,rgba(130,0,104,.86) 38%,
              rgba(130,0,104,.30) 66%,rgba(42,6,38,.05) 100%)}
-.hero .env{position:relative;z-index:1;padding-top:96px;padding-bottom:150px}
-.hero-txt{max-width:640px}
+.hero .env{position:relative;z-index:1;padding-top:72px;padding-bottom:150px}
+.hero-txt{max-width:700px}
 .sobre{display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 8px;border-radius:999px;
   background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);font-size:13px;font-weight:600}
 .sobre i{display:inline-block;padding:3px 9px;border-radius:999px;background:var(--ouro);
-  color:var(--roxo-noite);font-style:normal;font-weight:800;font-size:11.5px;letter-spacing:.06em}
-.hero h1{margin:22px 0 0;font-size:clamp(48px,7.4vw,96px);line-height:.9;font-stretch:66%;
+  color:var(--roxo-noite);font-style:normal;font-weight:800;font-size:11.5px;letter-spacing:.06em;white-space:nowrap}
+.hero h1{margin:22px 0 0;font-size:clamp(46px,6.4vw,84px);line-height:.9;font-stretch:66%;
   font-weight:900;text-transform:uppercase;letter-spacing:-.01em}
 .hero h1 mark{background:none;color:var(--ouro)}
 .hero p.lead{margin:24px 0 0;font-size:clamp(17px,1.9vw,20px);line-height:1.6;color:rgba(255,255,255,.88);max-width:54ch}
@@ -262,6 +262,34 @@ button{font:inherit;color:inherit}
 .servicos{list-style:none;margin:24px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .servicos li{padding:7px 13px;border-radius:999px;background:#fff;border:1px solid var(--linha);
   font-size:14px;font-weight:700;color:var(--roxo)}
+
+/* ---------- como funciona ---------- */
+.sec.como{padding-top:72px}
+.passos{list-style:none;margin:0;padding:0;display:grid;gap:14px;grid-template-columns:repeat(5,1fr);counter-reset:p}
+@media(max-width:1100px){.passos{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.passos{grid-template-columns:1fr}}
+.passo{position:relative;display:flex;flex-direction:column;gap:6px;padding:22px 20px 20px;border-radius:var(--raio);
+  background:var(--papel);border:1px solid var(--linha)}
+.passo-n{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;margin-bottom:8px;
+  background:var(--roxo);color:#fff;font-weight:900;font-size:17px;box-shadow:inset 0 -4px 0 var(--ouro)}
+.passo b{font-size:17px;color:var(--tinta)}
+.passo > span:last-child{font-size:14.5px;line-height:1.55;color:var(--cinza)}
+
+/* ---------- abertura do case FASA ---------- */
+.fasa-abre{padding:92px 0 0;background:var(--branco)}
+.fasa-abre .cab-sec{margin-bottom:34px}
+.fasa-abre h2{margin:14px 0 0;font-size:clamp(38px,5vw,64px);line-height:.92;font-stretch:66%;font-weight:900;text-transform:uppercase}
+.fasa-abre h2 em{font-style:normal;color:var(--roxo)}
+.atalhos.no-case{margin-top:0}
+
+/* ---------- botao fixo de WhatsApp ---------- */
+.wa-fixo{display:none}
+@media(max-width:1020px){
+  .wa-fixo{position:fixed;z-index:90;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));display:inline-flex;
+    align-items:center;gap:8px;padding:13px 18px 13px 15px;border-radius:999px;background:#25D366;color:#0b3d1f;
+    font-weight:800;font-size:15px;text-decoration:none;box-shadow:0 12px 28px -8px rgba(0,0,0,.45)}
+  .wa-fixo svg{width:22px;height:22px}
+}
 
 /* ---------- secoes ---------- */
 .sec{padding:92px 0}

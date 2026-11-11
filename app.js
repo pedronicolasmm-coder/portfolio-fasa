@@ -188,9 +188,10 @@
 
     var links = {};
     menu.querySelectorAll("a").forEach(function (a) { links[a.getAttribute("href").slice(1)] = a; });
-    var mapa = { inverno: "inverno", vestibular: "inverno", cursos: "cursos", summit: "summit",
-                 escolas: "escolas", campus: "campus", institucional: "campus",
-                 resultados: "resultados", sobre: "sobre" };
+    // secao da pagina -> link do menu que fica marcado enquanto ela esta na tela
+    var mapa = { resultados: "resultados", como: "como", sobre: "sobre",
+                 fasa: "fasa", papel: "fasa", inverno: "fasa", vestibular: "fasa", cursos: "fasa",
+                 summit: "fasa", escolas: "fasa", campus: "fasa", institucional: "fasa" };
     var obsSecao = new IntersectionObserver(function (ents) {
       ents.forEach(function (en) {
         if (!en.isIntersecting) return;
