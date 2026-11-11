@@ -191,6 +191,52 @@ button{font:inherit;color:inherit}
 .trafego p{margin:12px 0 0;max-width:62ch;font-size:16px;line-height:1.6;color:rgba(255,255,255,.82)}
 .trafego .bt-ouro{position:relative;z-index:1;padding:16px 24px;font-size:15.5px}
 .trafego .bt-ouro svg{width:20px;height:20px}
+.trafego p strong{color:var(--ouro)}
+.trafego-acoes{position:relative;z-index:1;display:flex;flex-direction:column;gap:10px;align-items:stretch}
+.trafego-acoes .bt-vazado{justify-content:center}
+
+/* ---------- alem da FASA (resultados de trafego) ---------- */
+.sec.escuro{background:var(--roxo-noite);color:#fff}
+.sec.escuro h2{color:#fff}
+.sec.escuro h2 em{color:var(--ouro)}
+.sec.escuro .rotulo{color:var(--ouro-claro)}
+.sec.escuro .rotulo b{background:var(--ouro);color:var(--roxo-noite)}
+.sec.escuro .intro{color:rgba(255,255,255,.78)}
+.sec.escuro .intro strong{color:#fff}
+.kpis{display:grid;gap:14px;margin:0;grid-template-columns:repeat(4,1fr)}
+@media(max-width:860px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{border-radius:var(--raio);padding:22px 22px 20px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.kpi dt{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.kpi dd{margin:10px 0 0;font-size:clamp(34px,4vw,52px);line-height:.95;font-stretch:66%;font-weight:900}
+.kpi.ouro{background:var(--ouro);border-color:var(--ouro);color:var(--roxo-noite)}
+.kpi.ouro dt{color:rgba(42,6,38,.7)}
+.licoes{display:grid;gap:14px;margin-top:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.licao{border-radius:var(--raio);padding:22px;border:1px solid rgba(255,255,255,.12)}
+.licao h3{margin:0;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--ouro-claro)}
+.licao p{margin:10px 0 0;font-size:15.5px;line-height:1.6;color:rgba(255,255,255,.8)}
+.licao strong{color:#fff}
+.outros-tit{margin:56px 0 18px;font-size:clamp(24px,2.6vw,32px);line-height:1;font-stretch:70%;font-weight:800;text-transform:uppercase}
+.outros{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.outro{display:block;border-radius:var(--raio);overflow:hidden;background:#fff;color:var(--tinta);text-decoration:none;
+  box-shadow:0 18px 44px -18px rgba(0,0,0,.6);transition:transform .2s}
+@media(hover:hover){.outro:hover{transform:translateY(-4px)}}
+.outro img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-bottom:1px solid var(--linha)}
+.outro-txt{display:block;padding:16px 18px 18px}
+.outro-txt b{display:block;font-size:17px}
+.outro-txt span{display:block;margin-top:4px;font-size:14px;color:var(--cinza)}
+.outro-txt b::after{content:" ↗";color:var(--roxo)}
+
+/* ---------- sobre mim ---------- */
+.sobre-grade{display:grid;gap:40px;align-items:center}
+@media(min-width:860px){.sobre-grade{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px}}
+.foto-pedro{width:100%;max-width:420px;aspect-ratio:4/5;border-radius:20px;object-fit:cover;
+  background:var(--roxo);box-shadow:inset 0 -14px 0 var(--ouro),var(--sombra);display:grid;place-items:center}
+.foto-pedro span{font-size:clamp(90px,12vw,150px);color:#fff;line-height:1}
+@media(max-width:859px){.foto-pedro{max-width:240px}}
+.sobre-txt p{margin:16px 0 0;font-size:17px;line-height:1.7;color:var(--cinza);max-width:58ch}
+.servicos{list-style:none;margin:24px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.servicos li{padding:7px 13px;border-radius:999px;background:#fff;border:1px solid var(--linha);
+  font-size:14px;font-weight:700;color:var(--roxo)}
 
 /* ---------- secoes ---------- */
 .sec{padding:92px 0}

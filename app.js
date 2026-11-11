@@ -189,7 +189,8 @@
     var links = {};
     menu.querySelectorAll("a").forEach(function (a) { links[a.getAttribute("href").slice(1)] = a; });
     var mapa = { inverno: "inverno", vestibular: "inverno", cursos: "cursos", summit: "summit",
-                 escolas: "escolas", campus: "campus", institucional: "campus" };
+                 escolas: "escolas", campus: "campus", institucional: "campus",
+                 resultados: "resultados", sobre: "sobre" };
     var obsSecao = new IntersectionObserver(function (ents) {
       ents.forEach(function (en) {
         if (!en.isIntersecting) return;
