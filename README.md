@@ -43,6 +43,12 @@ Para ver no computador antes de subir, basta abrir o `index.html` no navegador.
 2. Em `dados.js`, copie um bloco de peça da seção desejada e troque `titulo`, `capa` e `slides`.
 3. Se a peça tiver mais de uma versão (feed, story...), liste todas em `slides`, uma por linha.
 
+## Depois de mudar o visual ou o funcionamento
+
+No `index.html`, `estilo.css`, `dados.js` e `app.js` são carregados com `?v=2` no fim.
+Sempre que mudar um desses arquivos, aumente esse número (`?v=3`, `?v=4`...). Senão o
+navegador de quem já visitou o site pode continuar usando a versão antiga guardada.
+
 ## Observação
 
 A marca FASA pertence à instituição. As peças são exibidas aqui para fins de portfólio.
