@@ -97,7 +97,7 @@
     b.setAttribute("aria-label", "Ampliar foto: " + f.alt);
     b.innerHTML = '<img src="' + f.t + '" loading="lazy" decoding="async" alt="' + esc(f.alt) + '">';
     b.addEventListener("click", function () {
-      abrir(fotos.map(function (x) { return x.g; }), "Campus", ["Fotografia"], i, fotos.map(function (x) { return x.alt; }));
+      abrir(fotos.map(function (x) { return x.g; }), "Campus", ["Foto: acervo da FASA"], i, fotos.map(function (x) { return x.alt; }));
     });
     bento.appendChild(b);
   });

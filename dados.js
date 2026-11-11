@@ -472,18 +472,6 @@ window.DADOS = {
     "formatos": [
      "Feed 4:5"
     ]
-   },
-   {
-    "titulo": "Convite de formatura",
-    "capa": "img/t/formatura.jpg",
-    "w": 620,
-    "h": 324,
-    "slides": [
-     "img/g/formatura-1.jpg"
-    ],
-    "formatos": [
-     "Horizontal"
-    ]
    }
   ]
  },

@@ -26,6 +26,9 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--cab) + 16px);background:var(--branco)}
+/* No computador o site fica em 80%, como se o navegador estivesse com zoom de 80%.
+   No celular fica em 100%, senao o texto fica pequeno demais. */
+@media(min-width:1021px){html{zoom:.8}}
 body{margin:0;font-family:var(--corpo);color:var(--tinta);background:var(--branco);
   -webkit-text-size-adjust:100%;overflow-x:hidden;font-size:16px;line-height:1.55}
 img{max-width:100%;height:auto;display:block}
@@ -156,6 +159,38 @@ button{font:inherit;color:inherit}
 .num dd small{font-size:.5em;color:var(--ouro)}
 .num dt{margin-top:10px;font-size:14.5px;color:var(--cinza);font-weight:500;max-width:22ch}
 .num::after{content:"";display:block;width:36px;height:4px;border-radius:4px;margin-top:16px;background:var(--ouro)}
+
+/* ---------- meu papel e trafego ---------- */
+.escopo{padding:60px 0 20px}
+.escopo-grade{display:grid;gap:22px;align-items:stretch}
+@media(min-width:900px){.escopo-grade{grid-template-columns:1fr 1fr 1fr}}
+.escopo-cab h2{margin:14px 0 0;font-size:clamp(34px,4vw,52px);line-height:.92;font-stretch:66%;
+  font-weight:900;text-transform:uppercase}
+.escopo-cab h2 em{font-style:normal;color:var(--roxo)}
+.escopo-col{border-radius:var(--raio);padding:24px 24px 22px}
+.escopo-col h3{margin:0 0 12px;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.escopo-col ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.escopo-col li{position:relative;padding-left:26px;font-size:15.5px;line-height:1.5}
+.escopo-col li::before{position:absolute;left:0;top:1px;font-weight:900}
+.escopo-col.fiz{background:#F5E3F0;color:var(--tinta)}
+.escopo-col.fiz h3,.escopo-col.fiz li::before{color:var(--roxo)}
+.escopo-col.fiz li::before{content:"✓"}
+.escopo-col.nao{background:var(--papel);border:1px solid var(--linha);color:var(--cinza)}
+.escopo-col.nao h3{color:var(--tinta)}
+.escopo-col.nao li::before{content:"–";color:var(--cinza)}
+.trafego{margin-top:22px;display:grid;gap:22px;align-items:center;border-radius:20px;
+  padding:34px clamp(22px,4vw,44px);background:var(--roxo-noite);color:#fff;position:relative;overflow:hidden}
+.trafego{grid-template-columns:minmax(0,1fr)}
+@media(min-width:900px){.trafego{grid-template-columns:minmax(0,1fr) auto}}
+@media(max-width:899px){.trafego .bt-ouro{justify-content:center;text-align:center;white-space:normal}}
+.trafego::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;
+  background:radial-gradient(circle,rgba(234,182,0,.28),transparent 70%);pointer-events:none}
+.trafego-tag{display:inline-block;padding:4px 10px;border-radius:6px;background:var(--ouro);color:var(--roxo-noite);
+  font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.trafego h3{margin:12px 0 0;font-size:clamp(28px,3.4vw,42px);line-height:.95;font-stretch:66%;font-weight:900;text-transform:uppercase}
+.trafego p{margin:12px 0 0;max-width:62ch;font-size:16px;line-height:1.6;color:rgba(255,255,255,.82)}
+.trafego .bt-ouro{position:relative;z-index:1;padding:16px 24px;font-size:15.5px}
+.trafego .bt-ouro svg{width:20px;height:20px}
 
 /* ---------- secoes ---------- */
 .sec{padding:92px 0}
@@ -303,6 +338,9 @@ button{font:inherit;color:inherit}
 .chamada .bt-ouro{padding:17px 28px;font-size:16px}
 .chamada .bt-ouro svg{width:20px;height:20px}
 .chamada .pequeno{font-size:13px;color:rgba(255,255,255,.7)}
+.chamada p strong{color:var(--ouro)}
+.chamada .bt-vazado{padding:15px 24px;font-size:15px}
+.chamada .bt-vazado svg{width:19px;height:19px}
 
 /* rodape */
 .rodape{background:var(--roxo-noite);color:rgba(255,255,255,.72);font-size:14px}
