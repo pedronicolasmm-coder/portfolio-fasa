@@ -234,9 +234,19 @@ button{font:inherit;color:inherit}
 .foto-pedro span{font-size:clamp(90px,12vw,150px);color:#fff;line-height:1}
 @media(max-width:859px){.foto-pedro{max-width:240px}}
 .sobre-txt p{margin:16px 0 0;font-size:17px;line-height:1.7;color:var(--cinza);max-width:58ch}
-.servicos{list-style:none;margin:24px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.servicos li{padding:7px 13px;border-radius:999px;background:#fff;border:1px solid var(--linha);
-  font-size:14px;font-weight:700;color:var(--roxo)}
+.sobre-txt p.sobre-forte{padding:14px 18px;border-radius:12px;background:var(--ouro);color:var(--roxo-noite);
+  font-weight:800;font-size:17px;line-height:1.45}
+.servicos-tit{margin:64px 0 18px;font-size:clamp(26px,3vw,38px);line-height:1;font-stretch:66%;font-weight:900;text-transform:uppercase}
+.servicos{list-style:none;margin:0;padding:0;display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:600px){.servicos{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.servicos{grid-template-columns:repeat(3,1fr)}}
+.servicos li{padding:20px 20px 18px;border-radius:var(--raio);background:#fff;border:1px solid var(--linha);
+  border-top:4px solid var(--roxo)}
+.servicos li:first-child{background:var(--roxo);border-color:var(--roxo);border-top-color:var(--ouro);color:#fff}
+.servicos b{display:block;font-size:17px;color:var(--roxo)}
+.servicos li:first-child b{color:var(--ouro)}
+.servicos span{display:block;margin-top:6px;font-size:14.5px;line-height:1.55;color:var(--cinza)}
+.servicos li:first-child span{color:rgba(255,255,255,.85)}
 
 /* ---------- secoes ---------- */
 .sec{padding:92px 0}
