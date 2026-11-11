@@ -210,6 +210,29 @@ button{font:inherit;color:inherit}
 .kpi dd{margin:10px 0 0;font-size:clamp(34px,4vw,52px);line-height:.95;font-stretch:66%;font-weight:900}
 .kpi.ouro{background:var(--ouro);border-color:var(--ouro);color:var(--roxo-noite)}
 .kpi.ouro dt{color:rgba(42,6,38,.7)}
+/* instagram da pousada: numeros + print dos insights */
+.insta{display:grid;gap:14px;align-items:stretch}
+@media(min-width:900px){.insta{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}}
+.kpis.k2{grid-template-columns:repeat(2,1fr)}
+.kpis.k2 .kpi{display:flex;flex-direction:column;justify-content:space-between}
+.kpis.k2 dd{font-size:clamp(40px,5vw,64px)}
+.prova{margin:0;border-radius:var(--raio);overflow:hidden;background:#0d0d10;border:1px solid rgba(255,255,255,.12);
+  display:flex;flex-direction:column}
+.prova img{width:100%;flex:1;object-fit:cover;object-position:top}
+.prova figcaption{padding:10px 14px;font-size:12.5px;color:rgba(255,255,255,.6)}
+@media(min-width:900px){.prova{max-height:440px}}
+/* feed */
+.feed{display:grid;gap:14px;grid-template-columns:repeat(3,1fr)}
+@media(max-width:700px){.feed{grid-template-columns:repeat(2,1fr)}}
+.post{margin:0;border-radius:var(--raio);overflow:hidden;background:rgba(255,255,255,.06)}
+.post img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.post figcaption{display:flex;flex-wrap:wrap;gap:2px 8px;align-items:baseline;padding:10px 14px 12px;font-size:14px;color:rgba(255,255,255,.75)}
+.post figcaption b{color:var(--ouro-claro);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
+.sub-cab{margin-top:64px;margin-bottom:18px}
+.sub-cab .outros-tit{margin:0}
+.sub-cab .outros-tit em{font-style:normal;color:var(--ouro)}
+.sub-cab p{margin:12px 0 0;max-width:70ch;font-size:16px;line-height:1.6;color:rgba(255,255,255,.75)}
+.sub-cab .periodo{margin:0 0 0 8px;vertical-align:middle}
 .licoes{display:grid;gap:14px;margin-top:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
 .licao{border-radius:var(--raio);padding:22px;border:1px solid rgba(255,255,255,.12)}
 .licao h3{margin:0;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--ouro-claro)}
