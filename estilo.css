@@ -483,3 +483,13 @@ button{font:inherit;color:inherit}
   *{transition:none!important;animation:none!important}
   .revela{opacity:1;transform:none}
 }
+
+/* numeros do case FASA (saíram do topo para nao misturar com a Pousada) */
+.numeros-case{display:grid;grid-template-columns:repeat(3,1fr);margin:18px 0 46px}
+.numeros-case .num{padding:0 22px;border-left:1px solid var(--linha)}
+.numeros-case .num:first-child{border-left:0;padding-left:0}
+@media(max-width:560px){
+  .numeros-case .num{padding:0 12px}
+  .numeros-case .num dd{font-size:46px}
+  .numeros-case .num dt{font-size:13px}
+}
